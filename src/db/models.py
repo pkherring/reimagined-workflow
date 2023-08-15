@@ -11,7 +11,7 @@ class Users(Base):
     name = Column(String)
     email = Column(String, unique=True)
     password = Column(String)
-    posts = relationship("Post", back_populates="author")
+    posts = relationship("Posts", back_populates="author")
 
 class Groups(Base):
     """Model for products."""
@@ -20,7 +20,7 @@ class Groups(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     domain = Column(String, unique=True)
-    posts = relationship("Post", back_populates="group")
+    posts = relationship("Posts", back_populates="group")
 
 class Posts(Base):
     """Model for posts."""
@@ -31,5 +31,5 @@ class Posts(Base):
     content = Column(String)
     author_id = Column(Integer, ForeignKey("users.id"))
     group_id = Column(Integer, ForeignKey("groups.id"))
-    author = relationship("User", back_populates="posts")
-    group = relationship("Group", back_populates="posts")
+    author = relationship("Users", back_populates="posts")
+    group = relationship("Groups", back_populates="posts")
