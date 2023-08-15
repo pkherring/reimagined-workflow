@@ -9,7 +9,7 @@ url_object = URL.create(
     username="postgres",
     password="postgres",  # plain (unescaped) text
     host="localhost",
-    database="postgres",
+    database="reimagined-octo-goggles",
 )
 
 class Base(DeclarativeBase):
