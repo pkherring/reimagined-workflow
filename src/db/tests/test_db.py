@@ -16,7 +16,9 @@ from src.db.connector import Base
 
 @pytest.fixture(scope="module")
 def test_engine() -> Engine:
-    """Create connection engine to the database for testing. This is only used for testing.
+    """Create connection engine to the database for testing. 
+
+    This is only used for testing.
 
     Returns
     -------
@@ -34,7 +36,9 @@ def test_engine() -> Engine:
 
 @pytest.fixture(scope="module")
 def init_db(test_engine: Engine) -> Generator[None, None, None]:
-    """Create connection engine to the database for testing. This is only used for testing.
+    """Create connection engine to the database for testing.
+
+    This is only used for testing.
 
     Returns
     -------
