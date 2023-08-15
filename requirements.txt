@@ -1,3 +1,5 @@
 mypy==1.4.1
 pydantic==2.1.1
 sqlalchemy==2.0.19
+black==23.7.0
+ruff==0.0.282
