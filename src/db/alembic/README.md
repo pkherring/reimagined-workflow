@@ -1,5 +1,8 @@
 # Generic single-database configuration.
 
+# Configuration
+When configuring the `target_metadata`, make sure to import `Base` from the models module, not the location of the parent class.
+
 ## Notes on how to use Alembic
 1. Modify the model in `src/db/models.py`
 2. Run `alembic revision --autogenerate -m "message"`
